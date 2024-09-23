@@ -33,6 +33,3 @@ func _input(event: InputEvent) -> void:
 	elif event is InputEventMouseMotion:
 		if pressed:
 			movement += event.relative
-	elif event is InputEventScreenDrag:
-		if pressed:
-			movement += event.relative
