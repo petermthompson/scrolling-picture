@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfllm8nhcwilm"
-path="res://.godot/imported/Solar System Puzzle.apple-touch-icon.png-13d573006351b798ec6bbc66b36e2b89.ctex"
+path="res://.godot/imported/Solar System Puzzle.apple-touch-icon.png-d685fd784de2649903e5edfa89f143f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://webbuild/Solar System Puzzle.apple-touch-icon.png"
-dest_files=["res://.godot/imported/Solar System Puzzle.apple-touch-icon.png-13d573006351b798ec6bbc66b36e2b89.ctex"]
+source_file="res://docs/Solar System Puzzle.apple-touch-icon.png"
+dest_files=["res://.godot/imported/Solar System Puzzle.apple-touch-icon.png-d685fd784de2649903e5edfa89f143f6.ctex"]
 
 [params]
 

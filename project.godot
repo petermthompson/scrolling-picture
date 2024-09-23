@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Solar System Puzzle"
+config/name="Scrolling Picture"
+run/main_scene="res://scrolling_picture/scroller.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
