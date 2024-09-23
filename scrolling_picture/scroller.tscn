@@ -9,7 +9,7 @@
 shader = ExtResource("2_aj7bk")
 shader_parameter/scroll = 0.0
 shader_parameter/picture_size = Vector2(2158, 1024)
-shader_parameter/rectangle_size = Vector2(1264.45, 600)
+shader_parameter/rectangle_size = Vector2(1365.61, 648)
 
 [node name="Scroller" type="Control"]
 layout_mode = 3
