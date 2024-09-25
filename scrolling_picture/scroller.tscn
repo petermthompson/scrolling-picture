@@ -1,15 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://d28jxjnqpo04r"]
+[gd_scene load_steps=8 format=3 uid="uid://d28jxjnqpo04r"]
 
 [ext_resource type="Script" path="res://scrolling_picture/scroller.gd" id="1_dhltd"]
 [ext_resource type="Shader" path="res://scrolling_picture/scrolling_picture.gdshader" id="2_aj7bk"]
-[ext_resource type="Texture2D" uid="uid://b0co2afukvg0i" path="res://scrolling_picture/north_pole_sky.png" id="3_614lc"]
+[ext_resource type="Texture2D" uid="uid://cgynypsnck6jc" path="res://scrolling_picture/north_pole_sky_w_text.png" id="3_i2yaj"]
 [ext_resource type="Script" path="res://scrolling_picture/scrolling_picture.gd" id="4_fygbo"]
+[ext_resource type="Texture2D" uid="uid://cgol7f8vmuo8p" path="res://scrolling_picture/degrees_ruler.png" id="5_inh1p"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_cw2mm"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ri5oy"]
 shader = ExtResource("2_aj7bk")
 shader_parameter/scroll = 0.0
-shader_parameter/picture_size = Vector2(2158, 1024)
-shader_parameter/rectangle_size = Vector2(1365.61, 648)
+shader_parameter/picture_size = null
+shader_parameter/rectangle_size = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g2b4y"]
+shader = ExtResource("2_aj7bk")
+shader_parameter/scroll = 0.0
+shader_parameter/picture_size = Vector2(2158, 120)
+shader_parameter/rectangle_size = Vector2(2158, 120)
 
 [node name="Scroller" type="Control"]
 layout_mode = 3
@@ -20,24 +27,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dhltd")
 
-[node name="ScrollingPicture" type="TextureRect" parent="."]
+[node name="Picture" type="TextureRect" parent="."]
 unique_name_in_owner = true
-texture_repeat = 2
-material = SubResource("ShaderMaterial_cw2mm")
+material = SubResource("ShaderMaterial_ri5oy")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_614lc")
-expand_mode = 3
+texture = ExtResource("3_i2yaj")
 script = ExtResource("4_fygbo")
 
-[node name="GridOverlay" type="TextureRect" parent="."]
+[node name="Grid" type="TextureRect" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_g2b4y")
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+texture = ExtResource("5_inh1p")
+script = ExtResource("4_fygbo")

@@ -1,5 +1,6 @@
 @tool
 extends TextureRect
+class_name ScrollingPicture
 
 # The scroll amount in pixels.
 var scroll: float = 0.0
